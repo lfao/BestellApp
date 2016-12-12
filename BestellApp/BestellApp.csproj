@@ -52,10 +52,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MobilePhone.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MobilePhone.Designer.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

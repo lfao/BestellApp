@@ -49,6 +49,7 @@
             this.lstProducts.Name = "lstProducts";
             this.lstProducts.Size = new System.Drawing.Size(253, 384);
             this.lstProducts.TabIndex = 1;
+            this.lstProducts.SelectedIndexChanged += new System.EventHandler(this.lstProducts_SelectedIndexChanged);
             // 
             // butOrder
             // 
@@ -62,6 +63,7 @@
             this.butOrder.TabIndex = 3;
             this.butOrder.Text = "Order";
             this.butOrder.UseVisualStyleBackColor = false;
+            this.butOrder.Click += new System.EventHandler(this.butOrder_Click);
             // 
             // butBill
             // 
@@ -75,6 +77,7 @@
             this.butBill.TabIndex = 4;
             this.butBill.Text = "Bill";
             this.butBill.UseVisualStyleBackColor = false;
+            this.butBill.Click += new System.EventHandler(this.butBill_Click);
             // 
             // TableSelect
             // 

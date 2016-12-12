@@ -35,6 +35,7 @@
             this.txtAvail = new System.Windows.Forms.TextBox();
             this.txtOrdered = new System.Windows.Forms.MaskedTextBox();
             this.lblbestellt = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstProducts
@@ -49,7 +50,7 @@
             "Semmel"});
             this.lstProducts.Location = new System.Drawing.Point(3, 3);
             this.lstProducts.Name = "lstProducts";
-            this.lstProducts.Size = new System.Drawing.Size(253, 384);
+            this.lstProducts.Size = new System.Drawing.Size(253, 308);
             this.lstProducts.TabIndex = 0;
             this.lstProducts.SelectedIndexChanged += new System.EventHandler(this.lstProducts_SelectedIndexChanged);
             // 
@@ -73,7 +74,7 @@
             this.butDelete.Enabled = false;
             this.butDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butDelete.ForeColor = System.Drawing.Color.White;
-            this.butDelete.Location = new System.Drawing.Point(262, 289);
+            this.butDelete.Location = new System.Drawing.Point(265, 197);
             this.butDelete.Name = "butDelete";
             this.butDelete.Size = new System.Drawing.Size(135, 108);
             this.butDelete.TabIndex = 3;
@@ -84,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(258, 147);
+            this.label1.Location = new System.Drawing.Point(262, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 4;
@@ -92,14 +93,14 @@
             // 
             // txtAvail
             // 
-            this.txtAvail.Location = new System.Drawing.Point(323, 147);
+            this.txtAvail.Location = new System.Drawing.Point(327, 110);
             this.txtAvail.Name = "txtAvail";
             this.txtAvail.Size = new System.Drawing.Size(62, 22);
             this.txtAvail.TabIndex = 5;
             // 
             // txtOrdered
             // 
-            this.txtOrdered.Location = new System.Drawing.Point(323, 189);
+            this.txtOrdered.Location = new System.Drawing.Point(327, 152);
             this.txtOrdered.Name = "txtOrdered";
             this.txtOrdered.Size = new System.Drawing.Size(62, 22);
             this.txtOrdered.TabIndex = 6;
@@ -107,16 +108,28 @@
             // lblbestellt
             // 
             this.lblbestellt.AutoSize = true;
-            this.lblbestellt.Location = new System.Drawing.Point(259, 192);
+            this.lblbestellt.Location = new System.Drawing.Point(263, 155);
             this.lblbestellt.Name = "lblbestellt";
             this.lblbestellt.Size = new System.Drawing.Size(58, 17);
             this.lblbestellt.TabIndex = 7;
             this.lblbestellt.Text = "Bestellt:";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(4, 318);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(396, 58);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Leave Table";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MobilePhone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblbestellt);
             this.Controls.Add(this.txtOrdered);
             this.Controls.Add(this.txtAvail);
@@ -140,5 +153,6 @@
         private System.Windows.Forms.TextBox txtAvail;
         private System.Windows.Forms.MaskedTextBox txtOrdered;
         private System.Windows.Forms.Label lblbestellt;
+        private System.Windows.Forms.Button button1;
     }
 }

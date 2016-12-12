@@ -8,6 +8,12 @@ namespace BestellApp
 {
     public class Product
     {
+        public Product(string name, int count)
+        {
+            this.id = 0;
+            this.name = name;
+            this.count = count;
+        }
         private int id;
         private int count;
         private string name;
@@ -36,7 +42,15 @@ namespace BestellApp
 
         public override string ToString()
         {
-            return "[" + id.ToString() + "] " + name;
+            return name;
+        }
+        public void Order()
+        {
+            this.count--;
+        }
+        public void DeleteOne()
+        {
+            this.count++;
         }
     }
 }

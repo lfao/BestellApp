@@ -59,6 +59,7 @@
     <Compile Include="MobilePhone.Designer.cs">
       <DependentUpon>MobilePhone.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ordered.cs" />
     <Compile Include="Printer.cs">
       <SubType>UserControl</SubType>
     </Compile>

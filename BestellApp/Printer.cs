@@ -12,21 +12,28 @@ namespace BestellApp
 {
     public partial class Printer : UserControl
     {
-        public Printer()
+        public Printer(string Name)
         {
             InitializeComponent();
+            this.lblName.Text = Name;
         }
 
-        public bool Print(Product produkt, bool storno)
+        public bool Print(Product produkt, bool storno, Table tisch)
         {
             try
             {
-                if(storno)
+                if (storno)
                 {
-                    this.txtBon.Text = "==== STORNO ====/r/n";
+                    this.txtBon.Text = "==== STORNO ====\r\n";
                 }
-
-                this.txtBon.Text = produkt.Name;
+                else
+                {
+                    this.txtBon.Text = "<< NEUE Bestellung >>\r\n";
+                }
+                this.txtBon.Text += "Produkt: " + produkt.Name + "\r\n";
+                this.txtBon.Text += "Tisch: " + tisch.Name + "\r\n";
+                this.txtBon.Text += "\r\n" + DateTime.Now.ToString("dd.MM.yyyy") + "\r\n";
+                this.txtBon.Text += DateTime.Now.ToString("h:mm:ss") + "\r\n";
                 return true;
             }
             catch
@@ -39,7 +46,11 @@ namespace BestellApp
         {
             try
             {
-                this.txtBon.Text = tabelle.GetPrintText();
+                this.txtBon.Text = "=== RECHNUNG ===\r\n";
+                this.txtBon.Text += "Tisch: " + tabelle.Name;
+                this.txtBon.Text += tabelle.GetPrintText();
+                this.txtBon.Text += "\r\n" + DateTime.Now.ToString("dd.MM.yyyy") + "\r\n";
+                this.txtBon.Text += DateTime.Now.ToString("h:mm:ss") + "\r\n";
                 return true;
             }
             catch

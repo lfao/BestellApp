@@ -12,18 +12,36 @@ namespace BestellApp
 {
     public partial class Form1 : Form
     {
-
+        private bool readProdukts()
+        {
+            try
+            {
+                string all = System.IO.File.ReadAllText("speisekarte.txt");
+                all = all.Replace('\n', ' ');
+                string[] produkte = all.Split(new char[] { '\r' });
+                for(int i=0; i<produkte.Length;i++)
+                {
+                    if (produkte[i].Trim(new char[] { ' ' }) != string.Empty)
+                    {
+                        string[] product = produkte[i].Split(new char[] { '|' });
+                        product[0] = product[0].TrimStart(new char[] { ' ' });
+                        product[0] = product[0].TrimEnd(new char[] { ' ' });
+                        int count = Convert.ToInt32(product[1]);
+                        Globals.Products.Add(new Product(product[0], count));
+                    }
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public Form1()
         {
             InitializeComponent();
 
-            // Ersetzen durch Datei
-
-            Globals.Products.Add(new Product("Schweinebraten", 5));
-            Globals.Products.Add(new Product("saueres Lüngerl", 3));
-            Globals.Products.Add(new Product("Weissbier", 50));
-
-            // --------------------
+            this.readProdukts();
 
             for (int i = 1; i < 6; i++)
             {

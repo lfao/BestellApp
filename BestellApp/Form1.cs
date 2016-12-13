@@ -70,6 +70,11 @@ namespace BestellApp
             this.Controls.Add(Globals.printer[1]);
             Globals.printer[1].Location = new Point(400, 350);
             Globals.printer[1].Show();
+
+            ServiceControl cont = new BestellApp.ServiceControl();
+            this.Controls.Add(cont);
+            cont.Location = new Point(800, 10);
+            cont.Show();
         }
 
         public void ShowOrder(int index, Table table)

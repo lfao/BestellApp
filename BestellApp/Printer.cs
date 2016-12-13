@@ -22,18 +22,22 @@ namespace BestellApp
         {
             try
             {
+                string neueBestellung;
                 if (storno)
                 {
-                    this.txtBon.Text = "==== STORNO ====\r\n";
+                    neueBestellung = "<<<<<<<  STORNO  >>>>>>>\r\n";
                 }
                 else
                 {
-                    this.txtBon.Text = "<< NEUE Bestellung >>\r\n";
+                    neueBestellung = "<<<<  NEUE Bestellung  >>>>\r\n";
                 }
-                this.txtBon.Text += "Produkt: " + produkt.Name + "\r\n";
-                this.txtBon.Text += "Tisch: " + tisch.Name + "\r\n";
-                this.txtBon.Text += "\r\n" + DateTime.Now.ToString("dd.MM.yyyy") + "\r\n";
-                this.txtBon.Text += DateTime.Now.ToString("h:mm:ss") + "\r\n";
+                neueBestellung += "Produkt: " + produkt.Name + "\r\n";
+                neueBestellung += "Tisch: " + tisch.Name + "\r\n";
+                neueBestellung += "\r\nDatum: " + DateTime.Now.ToString("dd.MM.yyyy") + "\r\n";
+                neueBestellung += "Uhrzeit: " + DateTime.Now.ToString("hhh:mm:ss") + "\r\n";
+                neueBestellung += "\r\n_________________________\r\n\r\n";
+                neueBestellung += this.txtBon.Text;
+                this.txtBon.Text = neueBestellung;
                 return true;
             }
             catch
@@ -46,11 +50,14 @@ namespace BestellApp
         {
             try
             {
-                this.txtBon.Text = "=== RECHNUNG ===\r\n";
-                this.txtBon.Text += "Tisch: " + tabelle.Name;
-                this.txtBon.Text += tabelle.GetPrintText();
-                this.txtBon.Text += "\r\n" + DateTime.Now.ToString("dd.MM.yyyy") + "\r\n";
-                this.txtBon.Text += DateTime.Now.ToString("h:mm:ss") + "\r\n";
+                string text;
+                text = "<<<<<<  RECHNUNG  >>>>>\r\n";
+                text += "Tisch: " + tabelle.Name;
+                text += tabelle.GetPrintText();
+                text += "\r\nDatum:" + DateTime.Now.ToString("dd.MM.yyyy") + "\r\n";
+                text += "Uhrzeit: " + DateTime.Now.ToString("hhh:mm:ss") + "\r\n";
+                text += "\r\n_________________________\r\n\r\n";
+                this.txtBon.Text = text + this.txtBon.Text;
                 return true;
             }
             catch

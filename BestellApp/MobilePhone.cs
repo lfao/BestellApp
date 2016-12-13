@@ -52,10 +52,13 @@ namespace BestellApp
         }
         private void update()
         {
-            this.txtAvail.Text = ((Product)this.lstProducts.SelectedItem).Available.ToString();
-            this.txtOrdered.Text = actTable.GetOrdered((Product)this.lstProducts.SelectedItem).ToString();
-            this.butAdd.Enabled = ((Product)this.lstProducts.SelectedItem).IsAvailable;
-            this.butDelete.Enabled = actTable.GetOrdered((Product)this.lstProducts.SelectedItem) > 0 ? true : false;
+            if (this.lstProducts.SelectedItem != null)
+            {
+                this.txtAvail.Text = ((Product)this.lstProducts.SelectedItem).Available.ToString();
+                this.txtOrdered.Text = actTable.GetOrdered((Product)this.lstProducts.SelectedItem).ToString();
+                this.butAdd.Enabled = ((Product)this.lstProducts.SelectedItem).IsAvailable;
+                this.butDelete.Enabled = actTable.GetOrdered((Product)this.lstProducts.SelectedItem) > 0 ? true : false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

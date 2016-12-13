@@ -36,6 +36,7 @@
             // 
             // txtBon
             // 
+            this.txtBon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBon.Location = new System.Drawing.Point(3, 39);
             this.txtBon.Name = "txtBon";
             this.txtBon.Size = new System.Drawing.Size(266, 399);

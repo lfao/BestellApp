@@ -46,7 +46,10 @@ namespace BestellApp
 
         private void butBill_Click(object sender, EventArgs e)
         {
-            Globals.printer[1].Print((Table)lstProducts.SelectedItem);
+            if(!Globals.printer[1].Print((Table)lstProducts.SelectedItem))
+            {
+                MessageBox.Show("You choosen an empty table!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -51,9 +51,12 @@ namespace BestellApp
             try
             {
                 string text;
-                text = "<<<<<<  RECHNUNG  >>>>>\r\n";
-                text += "Tisch: " + tabelle.Name;
-                text += tabelle.GetPrintText();
+                if ((text = tabelle.GetPrintText()) == "\r\n")
+                {
+                    return false;
+                }
+
+                text = "<<<<<<  RECHNUNG  >>>>>\r\n" + "Tisch: " + tabelle.Name + text;
                 text += "\r\nDatum:" + DateTime.Now.ToString("dd.MM.yyyy") + "\r\n";
                 text += "Uhrzeit: " + DateTime.Now.ToString("hhh:mm:ss") + "\r\n";
                 text += "\r\n_________________________\r\n\r\n";

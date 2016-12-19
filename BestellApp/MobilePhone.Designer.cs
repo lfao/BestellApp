@@ -48,7 +48,8 @@
             "Leberkäse",
             "Senf",
             "Semmel"});
-            this.lstProducts.Location = new System.Drawing.Point(3, 3);
+            this.lstProducts.Location = new System.Drawing.Point(3, 2);
+            this.lstProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstProducts.Name = "lstProducts";
             this.lstProducts.Size = new System.Drawing.Size(253, 308);
             this.lstProducts.TabIndex = 0;
@@ -60,7 +61,8 @@
             this.butAdd.Enabled = false;
             this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.Location = new System.Drawing.Point(262, 3);
+            this.butAdd.Location = new System.Drawing.Point(261, 2);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(135, 97);
             this.butAdd.TabIndex = 2;
@@ -74,7 +76,8 @@
             this.butDelete.Enabled = false;
             this.butDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butDelete.ForeColor = System.Drawing.Color.White;
-            this.butDelete.Location = new System.Drawing.Point(265, 197);
+            this.butDelete.Location = new System.Drawing.Point(262, 212);
+            this.butDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butDelete.Name = "butDelete";
             this.butDelete.Size = new System.Drawing.Size(135, 108);
             this.butDelete.TabIndex = 3;
@@ -85,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(262, 110);
+            this.label1.Location = new System.Drawing.Point(261, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 4;
@@ -94,15 +97,17 @@
             // txtAvail
             // 
             this.txtAvail.Location = new System.Drawing.Point(327, 110);
+            this.txtAvail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAvail.Name = "txtAvail";
-            this.txtAvail.Size = new System.Drawing.Size(62, 22);
+            this.txtAvail.Size = new System.Drawing.Size(63, 22);
             this.txtAvail.TabIndex = 5;
             // 
             // txtOrdered
             // 
-            this.txtOrdered.Location = new System.Drawing.Point(327, 152);
+            this.txtOrdered.Location = new System.Drawing.Point(327, 153);
+            this.txtOrdered.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOrdered.Name = "txtOrdered";
-            this.txtOrdered.Size = new System.Drawing.Size(62, 22);
+            this.txtOrdered.Size = new System.Drawing.Size(63, 22);
             this.txtOrdered.TabIndex = 6;
             // 
             // lblbestellt
@@ -117,7 +122,8 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(4, 318);
+            this.button1.Location = new System.Drawing.Point(4, 334);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(396, 58);
             this.button1.TabIndex = 8;
@@ -129,6 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblbestellt);
             this.Controls.Add(this.txtOrdered);
@@ -137,6 +144,7 @@
             this.Controls.Add(this.butDelete);
             this.Controls.Add(this.butAdd);
             this.Controls.Add(this.lstProducts);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MobilePhone";
             this.Size = new System.Drawing.Size(400, 400);
             this.ResumeLayout(false);

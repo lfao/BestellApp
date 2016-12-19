@@ -19,7 +19,7 @@ namespace BestellApp
                 string all = System.IO.File.ReadAllText("speisekarte.txt");
                 all = all.Replace('\n', ' ');
                 string[] produkte = all.Split(new char[] { '\r' });
-                for(int i=0; i<produkte.Length;i++)
+                for (int i = 0; i < produkte.Length; i++)
                 {
                     if (produkte[i].Trim(new char[] { ' ' }) != string.Empty)
                     {
@@ -34,20 +34,47 @@ namespace BestellApp
             }
             catch
             {
-                return false;
+                MessageBox.Show("Failed loading Product File!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
+            return false;
         }
+
+        private bool readTables()
+        {
+            try
+            {
+
+                string all = System.IO.File.ReadAllText("tables.txt");
+                all = all.Replace('\n', ' ');
+                string[] tables = all.Split(new char[] { '\r' });
+                for (int i = 0; i < tables.Length; i++)
+                {
+                    if (tables[i].Trim(new char[] { ' ' }) != string.Empty)
+                    {
+                        tables[i] = tables[i].TrimStart(new char[] { ' ' });
+                        tables[i] = tables[i].TrimEnd(new char[] { ' ' });
+                        Table tab = new Table(i, tables[i]);
+                        Globals.Tables.Add(tab);
+                    }
+                }
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Failed loading Table File!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return false;
+        }
+
         public Form1()
         {
             InitializeComponent();
 
             this.readProdukts();
 
-            for (int i = 1; i < 6; i++)
-            {
-                Table tab = new Table(i - 1, "Tab" + i.ToString());
-                Globals.Tables.Add(tab);
-            }
+            this.readTables();
 
             Globals.tableselect[0] = new TableSelect(0);
             this.Controls.Add(Globals.tableselect[0]);

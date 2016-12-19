@@ -38,16 +38,17 @@
             this.lstProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstProducts.FormattingEnabled = true;
             this.lstProducts.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lstProducts.ItemHeight = 38;
+            this.lstProducts.ItemHeight = 31;
             this.lstProducts.Items.AddRange(new object[] {
             "T1",
             "T2",
             "T3",
             "T4",
             "T5"});
-            this.lstProducts.Location = new System.Drawing.Point(3, 3);
+            this.lstProducts.Location = new System.Drawing.Point(2, 2);
+            this.lstProducts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstProducts.Name = "lstProducts";
-            this.lstProducts.Size = new System.Drawing.Size(253, 384);
+            this.lstProducts.Size = new System.Drawing.Size(191, 283);
             this.lstProducts.TabIndex = 1;
             this.lstProducts.SelectedIndexChanged += new System.EventHandler(this.lstProducts_SelectedIndexChanged);
             // 
@@ -57,9 +58,10 @@
             this.butOrder.Enabled = false;
             this.butOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOrder.ForeColor = System.Drawing.Color.White;
-            this.butOrder.Location = new System.Drawing.Point(262, 3);
+            this.butOrder.Location = new System.Drawing.Point(196, 2);
+            this.butOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butOrder.Name = "butOrder";
-            this.butOrder.Size = new System.Drawing.Size(135, 216);
+            this.butOrder.Size = new System.Drawing.Size(101, 176);
             this.butOrder.TabIndex = 3;
             this.butOrder.Text = "Order";
             this.butOrder.UseVisualStyleBackColor = false;
@@ -71,9 +73,10 @@
             this.butBill.Enabled = false;
             this.butBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butBill.ForeColor = System.Drawing.Color.White;
-            this.butBill.Location = new System.Drawing.Point(262, 225);
+            this.butBill.Location = new System.Drawing.Point(196, 183);
+            this.butBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butBill.Name = "butBill";
-            this.butBill.Size = new System.Drawing.Size(135, 172);
+            this.butBill.Size = new System.Drawing.Size(101, 140);
             this.butBill.TabIndex = 4;
             this.butBill.Text = "Bill";
             this.butBill.UseVisualStyleBackColor = false;
@@ -81,13 +84,15 @@
             // 
             // TableSelect
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.butBill);
             this.Controls.Add(this.butOrder);
             this.Controls.Add(this.lstProducts);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TableSelect";
-            this.Size = new System.Drawing.Size(400, 400);
+            this.Size = new System.Drawing.Size(300, 325);
             this.ResumeLayout(false);
 
         }

@@ -1,3 +1,8 @@
-Schweinebraten || 10
-Weissbier || 100
-Limo Weiß || 100
+Schweinebraten | 10
+saueres Lüngerl | 20
+Leberkäs | 20
+Weisswurscht | 14
+Weissbier | 100
+helles Bier | 50
+Apfelsaftschorle | 200
+Wasser | 50
